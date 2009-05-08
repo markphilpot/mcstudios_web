@@ -34,6 +34,8 @@ function display_main($location)
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>MC Studios</title>
+<link rel="openid.server" href="http://www.myopenid.com/server">
+<link rel="openid.delegate" href="http://griphiam.myopenid.com">
 <style type="text/css" media="screen"><!-- @import "style.css"; --></style>
 <!--[if lte IE 6]>
 <link rel="stylesheet" href="iestyle.css" type="text/css" />
