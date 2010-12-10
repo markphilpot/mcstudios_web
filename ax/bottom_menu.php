@@ -12,7 +12,7 @@ else if($loc == "design")
 }
 else if($loc == "studio")
 {
-  echo "<a id='music_link' href=''>music</a> &alefsym; <a id='studio_equip_link' href='#'>equipment</a>";
+  echo "<a id='music_link' href='http://soundcloud.com/mphilpot'>music</a> &alefsym; <a id='studio_equip_link' href='#'>equipment</a>";
 }
 else if($loc == "about")
 {

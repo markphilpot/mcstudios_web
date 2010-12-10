@@ -258,7 +258,6 @@ html, body
    background: #3F3F3F;
    color: #DEDEDE;
    font-family: TeXGyreHeros, Helvetica, sans-serif;
-   font-size: 0.85em;
    height: 100%;
    width: 100%;
 }
@@ -377,6 +376,7 @@ html, body
    background: #222222;
    border: 1px solid #FFFFFF;
    text-align: center;
+   font-size: 1.1em;
 }
 
 #site_links
@@ -535,11 +535,12 @@ h4
 {
   font-size: 1.25em;
   margin-bottom: 1em;
+  margin-top: 0.5em;
 }
 
 p
 {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.6em;
 }
 
 /*

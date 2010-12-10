@@ -94,6 +94,15 @@
 	loadMain("design");
       });
       
+      $("#studio_link").click(function(){
+	$("#bottom_menu").load("/ax/bottom_menu.php?loc=studio", function(){
+	  $("#studio_equip_link").click(function(){
+	    loadMain("studio_equipment");
+	  });
+	});
+	loadMain("studio");
+      });
+      
       $("#about_link").click(function(){
 	$("#bottom_menu").load("/ax/bottom_menu.php?loc=about", function(){
 	  $("#resume_link").click(function(){
