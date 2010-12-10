@@ -267,11 +267,17 @@ html, body
    z-index: 10;
 }
 
+.menu
+{
+  font-family: Daniel;
+  color: #fff;
+  text-shadow: #000 2px 2px 2px;
+}
+
 #top_menu
 {
    position: absolute;
    left: 140px;
-   font-family: Daniel;
    font-size: 2.5em;
    margin-top: 0.5em;
 }
@@ -288,7 +294,6 @@ html, body
    left: 120px;
    top: 50px;
    width: 50%;
-   font-family: Daniel;
    font-size: 1.75em;
 }
 

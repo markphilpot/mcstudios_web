@@ -24,14 +24,14 @@
   <div id="header">
   <div id="logo" class="filter cursor"></div>
 
-  <div id="top_menu">
+  <div id="top_menu" class="menu">
     <a id="photography_link" href="#">photography</a>
     <a id="design_link" href="#">design & dev</a>
     <a id="studio_link" href="#">studio</a>
     <a id="about_link" href="#">about</a>
   </div>
 
-  <div id="bottom_menu"></div>
+  <div id="bottom_menu" class="menu"></div>
 
   </div> <!-- end header -->
 
@@ -58,28 +58,50 @@
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
 
   <script type="text/javascript">
+  
+    function loadMain(loc){
+      $("#main").load("/ax/main.php?loc="+loc);
+    };
+  
     $(function(){
     
-      $("#main").load("/ax/main.php?loc=index");
+      loadMain("index");
     
       $("#logo").click(function(){
-	$("#main").load("/ax/main.php?loc=index");
+	loadMain("index");
       });
     
       $("#photography_link").click(function(){
       
 	$("#bottom_menu").load("/ax/bottom_menu.php?loc=photography", function(){
 	  $("#photography_equip_link").click(function(){
-	    $("#main").load("/ax/main.php?loc=photo_equipment");
+	    loadMain("photo_equipment");
 	  });
 	});
-	$("#main").load("/ax/main.php?loc=photography");
+	loadMain("photography");
       });
       
       $("#design_link").click(function(){
 	$("#bottom_menu").load("/ax/bottom_menu.php?loc=design", function(){
+	  $("#sites_link").click(function(){
+	    loadMain("sites");
+	  });
+	  $("#publications_link").click(function(){
+	    loadMain("publications");
+	  });
 	});
-	$("#main").load("/ax/main.php?loc=design");
+	loadMain("design");
+      });
+      
+      $("#about_link").click(function(){
+	$("#bottom_menu").load("/ax/bottom_menu.php?loc=about", function(){
+	  $("#resume_link").click(function(){
+	    loadMain("resume");
+	  });
+	  $("#contact_link").click(function(){
+	    loadMain("contact");
+	  });
+	});
       });
       
     });
