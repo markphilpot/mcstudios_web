@@ -1,6 +1,6 @@
 <?php
 
-$loc = $REQUEST["loc"];
+$loc = $_REQUEST["loc"];
 
 if($loc == "photography")
 {

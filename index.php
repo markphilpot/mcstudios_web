@@ -1,34 +1,3 @@
-<?php
-require_once("include/set_env.php");
-require_once("include/font.php");
-require_once("server.php");
-require_once('content/main.php');
-
-$location = "front_page";
-
-if(isset($_REQUEST['loc']))
-{
-   $location = $_REQUEST['loc'];
-}
-
-require_once('include/translate.php');
- 
-function display_main($location)
-{
-   $id = translate($location);
-   
-   global $db;
-   
-   $result = $db->getAll('select * from wp_posts where ID = ?', array($id));
-   
-   while( list($temp, $row) = each($result) )
-   {
-      $tmp = preg_replace_callback("/(&lt;\?php.*&gt;)/",'escape_html', $row['post_content']);
-      eval('?>'.$tmp);
-   }
-}
-
-?>
 <!doctype html>  
 
 <html lang="en" class="no-js">
@@ -68,10 +37,8 @@ function display_main($location)
   <div id="right"></div>
 
   <div id="main_container">
-  <div id="main">
-  <?php display_main($location); ?>
-  </div>
-  <div class="spacer">&nbsp;</div>
+    <div id="main"></div>
+    <div class="spacer">&nbsp;</div>
   </div>
 
   <div id="footer">
