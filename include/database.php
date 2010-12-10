@@ -1,9 +1,11 @@
 <?php
 
-require_once('include/config.php');
+require_once('config.php');
 
 function getDB()
 {
+  global $host, $database, $user;
+
   $db = new PDO("mysql:host=$host;dbname=$database", $user);
    
   return $db;
