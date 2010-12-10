@@ -258,7 +258,7 @@ html, body
    background: #3F3F3F;
    color: #DEDEDE;
    font-family: TeXGyreHeros, Helvetica, sans-serif;
-   font-size: 0.8em;
+   font-size: 0.85em;
    height: 100%;
    width: 100%;
 }
@@ -305,29 +305,34 @@ html, body
 
 .menu a:link
 {
+  
 	color: #F3F3F3;
+	font-weight: normal;
 }
 
 .menu a:visited
 {
 	color: #F3F3F3;
+	font-weight: normal;
 }
 
 .menu a:hover
 {
 	color: #CCCCA1;
+	font-weight: normal;
 }
 
 .menu a:active
 {
 	color: #F3F3F3;
+	font-weight: normal;
 }
 
 #top_menu
 {
    position: absolute;
    left: 140px;
-   font-size: 2.5em;
+   font-size: 2em;
    margin-top: 0.5em;
 }
 
@@ -341,9 +346,9 @@ html, body
    position: relative;
    margin-left: 20px;
    left: 120px;
-   top: 60px;
+   top: 50px;
    width: 50%;
-   font-size: 1.75em;
+   font-size: 1.5em;
 }
 
 #bottom_menu img
@@ -430,7 +435,6 @@ html, body
 	margin-bottom: 0px;
 	margin-left: 5%;
 	margin-right: 5%;
-	float: left;
 }
 
 #main_left
@@ -524,6 +528,12 @@ a:active
 h3
 {
   font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+h4
+{
+  font-size: 1.25em;
   margin-bottom: 1em;
 }
 
