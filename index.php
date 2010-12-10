@@ -15,9 +15,6 @@
 
   <!-- CSS : implied media="all" -->
   <link rel="stylesheet" href="style.css">
- 
-  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-  <script src="js/libs/modernizr-1.6.min.js"></script>
 
 </head>
 
@@ -52,10 +49,14 @@
   </div> <!-- end container -->
 
   <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
 
   <script>
     $(function(){
+    
+      $.get("/ax/main.php?loc=index", function(data){
+	$("#main").html(data);
+      });
     
       $("#logo").click(function(){
 	$.get("/ax/main.php?loc=index", function(data){
@@ -71,7 +72,7 @@
 	  $("#main").html(data);
 	});
       });
-    };
+    });
   </script>
 
   <script>

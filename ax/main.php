@@ -27,6 +27,8 @@ try
 
     eval('?>'.$tmp);
   }
+  
+  $db = null;
 }
 catch(PDOException $e)
 {
