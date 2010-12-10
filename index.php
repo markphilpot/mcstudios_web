@@ -24,7 +24,12 @@
   <div id="header">
   <div id="logo" class="filter cursor"></div>
 
-  <div id="top_menu"><a id="photography_link" href="#">photography</a></div>
+  <div id="top_menu">
+    <a id="photography_link" href="#">photography</a>
+    <a id="design_link" href="#">design & dev</a>
+    <a id="studio_link" href="#">studio</a>
+    <a id="about_link" href="#">about</a>
+  </div>
 
   <div id="bottom_menu"></div>
 

@@ -271,9 +271,9 @@ html, body
 {
    position: absolute;
    left: 140px;
-   height: 30px;
    font-family: Daniel;
-   font-size: 3em;
+   font-size: 2.5em;
+   margin-top: 0.5em;
 }
 
 #bottom_menu
@@ -281,9 +281,10 @@ html, body
    position: relative;
    margin-left: 20px;
    left: 120px;
-   top: 40px;
-   height: 30px;
+   top: 50px;
    width: 50%;
+   font-family: Daniel;
+   font-size: 1.75em;
 }
 
 #bottom_menu img
