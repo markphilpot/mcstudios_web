@@ -16,6 +16,7 @@
   <!-- CSS : implied media="all" -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="fonts/daniel/stylesheet.css">
+  <link rel="stylesheet" href="fonts/texgyreheros/stylesheet.css">
 
 </head>
 

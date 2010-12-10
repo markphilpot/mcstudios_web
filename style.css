@@ -220,6 +220,36 @@ button {  width: auto; overflow: visible; }
  /* Primary Styles
     Author: Mark Philpot
  */
+ 
+/* Links */
+
+a:link
+{
+	font-weight: bold;
+	text-decoration: none;
+	color: #7E9999;
+}
+
+a:visited
+{
+	font-weight: bold;
+	text-decoration: none;
+	color: #7E9999;
+}
+
+a:hover
+{
+	font-weight: bold;
+	text-decoration: none;
+	color: #CCCCA1;
+}
+
+a:active
+{
+	font-weight: bold;
+	text-decoration: none;
+	color: #7E9999;
+}
 
 html, body
 {
@@ -227,7 +257,7 @@ html, body
    padding: 0px;
    background: #3F3F3F;
    color: #DEDEDE;
-   font-family: Verdana, Arial, Helvetica, sans-serif;
+   font-family: TeXGyreHeros, Helvetica, sans-serif;
    font-size: 0.8em;
    height: 100%;
    width: 100%;
@@ -273,9 +303,14 @@ html, body
   text-shadow: #000 2px 2px 2px;
 }
 
-.menu a:active
+.menu a:link
 {
-	color: #fff;
+	color: #F3F3F3;
+}
+
+.menu a:visited
+{
+	color: #F3F3F3;
 }
 
 .menu a:hover
@@ -283,14 +318,9 @@ html, body
 	color: #CCCCA1;
 }
 
-.menu a:link
+.menu a:active
 {
-	color: #fff;
-}
-
-.menu a:visited
-{
-	color: #fff;
+	color: #F3F3F3;
 }
 
 #top_menu
@@ -311,7 +341,7 @@ html, body
    position: relative;
    margin-left: 20px;
    left: 120px;
-   top: 50px;
+   top: 60px;
    width: 50%;
    font-size: 1.75em;
 }
@@ -356,7 +386,7 @@ html, body
 
 #left
 {
-	position: absolute;
+   position: absolute;
    top: 0px;
    left: 0px;
    height: 100%;
@@ -400,6 +430,7 @@ html, body
 	margin-bottom: 0px;
 	margin-left: 5%;
 	margin-right: 5%;
+	float: left;
 }
 
 #main_left
@@ -407,7 +438,7 @@ html, body
 	float: left;
 	width: 48%;
 	border-top: 1px solid #FFFFFF;
-	/* border-right: 1px solid #FFFFFF; */
+	border-right: 1px solid #FFFFFF;
 	text-align: center;
 	padding-top: 10px;
 	padding-right: 10px;
@@ -426,7 +457,6 @@ html, body
 	float: left;
 	width: 48%;
 	border-top: 1px solid #FFFFFF;
-	border-left: 1px solid #FFFFFF;
 	padding-top: 10px;
 	padding-left: 10px;
 	min-height: 200px;
@@ -463,20 +493,6 @@ div.spacer
 
 /* Links */
 
-a:active
-{
-	font-weight: bold;
-	text-decoration: none;
-	color: #7E9999;
-}
-
-a:hover
-{
-	font-weight: bold;
-	text-decoration: none;
-	color: #CCCCA1;
-}
-
 a:link
 {
 	font-weight: bold;
@@ -491,6 +507,30 @@ a:visited
 	color: #7E9999;
 }
 
+a:hover
+{
+	font-weight: bold;
+	text-decoration: none;
+	color: #CCCCA1;
+}
+
+a:active
+{
+	font-weight: bold;
+	text-decoration: none;
+	color: #7E9999;
+}
+
+h3
+{
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+p
+{
+  margin-bottom: 0.5em;
+}
 
 /*
  * Media queries for responsive design
