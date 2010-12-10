@@ -2,6 +2,13 @@
 
 require_once('../include/database.php');
 
+function escape_html($text)
+{
+   $tmp = str_replace('<br />', ' ', $text[1]);
+   $tmp = str_replace('<br>', ' ', $tmp);
+   return html_entity_decode($tmp);
+}
+
 try
 {
   $db = getDB();
