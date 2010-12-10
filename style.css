@@ -270,8 +270,27 @@ html, body
 .menu
 {
   font-family: Daniel;
-  color: #fff;
   text-shadow: #000 2px 2px 2px;
+}
+
+.menu a:active
+{
+	color: #fff;
+}
+
+.menu a:hover
+{
+	color: #CCCCA1;
+}
+
+.menu a:link
+{
+	color: #fff;
+}
+
+.menu a:visited
+{
+	color: #fff;
 }
 
 #top_menu
@@ -427,11 +446,6 @@ div.spacer
 {
 	cursor: pointer; 
 	cursor: hand;
-}
-
-.menu
-{
-	float: left;
 }
 
 .caption
