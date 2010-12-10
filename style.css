@@ -276,6 +276,11 @@ html, body
    margin-top: 0.5em;
 }
 
+#top_menu a
+{
+  margin-right: 1em;
+}
+
 #bottom_menu
 {
    position: relative;

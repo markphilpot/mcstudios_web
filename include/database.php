@@ -20,11 +20,11 @@ function translate($page)
       $var = 115;
    elseif($page == "photography")
       $var = 117;
-   elseif($page == "equipment")
+   elseif($page == "photo_equipment")
       $var = 118;
    elseif($page == "design")
       $var = 119;
-   elseif($page == "my_sites")
+   elseif($page == "sites")
       $var = 120;
    elseif($page == "publications")
       $var = 121;

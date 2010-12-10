@@ -60,24 +60,28 @@
   <script type="text/javascript">
     $(function(){
     
-      $.get("/ax/main.php?loc=index", function(data){
-	$("#main").html(data);
-      });
+      $("#main").load("/ax/main.php?loc=index");
     
       $("#logo").click(function(){
-	$.get("/ax/main.php?loc=index", function(data){
-	  $("#main").html(data);
-	});
+	$("#main").load("/ax/main.php?loc=index");
       });
     
       $("#photography_link").click(function(){
-	$.get("/ax/bottom_menu.php?loc=photography", function(data){
-	  $("#bottom_menu").html(data);
+      
+	$("#bottom_menu").load("/ax/bottom_menu.php?loc=photography", function(){
+	  $("#photography_equip_link").click(function(){
+	    $("#main").load("/ax/main.php?loc=photo_equipment");
+	  });
 	});
-	$.get("/ax/main.php?loc=photography", function(data){
-	  $("#main").html(data);
-	});
+	$("#main").load("/ax/main.php?loc=photography");
       });
+      
+      $("#design_link").click(function(){
+	$("#bottom_menu").load("/ax/bottom_menu.php?loc=design", function(){
+	});
+	$("#main").load("/ax/main.php?loc=design");
+      });
+      
     });
   </script>
 
