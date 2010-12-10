@@ -29,59 +29,94 @@ function display_main($location)
 }
 
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!doctype html>  
+
+<html lang="en" class="no-js">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>MC Studios</title>
-<link rel="openid.server" href="http://www.myopenid.com/server">
-<link rel="openid.delegate" href="http://griphiam.myopenid.com">
-<style type="text/css" media="screen"><!-- @import "style.css"; --></style>
-<!--[if lte IE 6]>
-<link rel="stylesheet" href="iestyle.css" type="text/css" />
-<![endif]-->
-<?php $xajax->printJavascript('./ajax/'); ?>
-<script type="text/javascript" src="./scripts/lib/prototype.js"></script>
-<script type="text/javascript" src="./scripts/src/scriptaculous.js"></script>
-<script type="text/javascript" src="scripts/custom/toggle.js"></script>
-<?php include("include/highlight.inc"); ?>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>MC Studios</title>
+  <meta name="description" content="MC Studios">
+  <meta name="author" content="Mark Philpot">
+
+  <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS : implied media="all" -->
+  <link rel="stylesheet" href="style.css">
+ 
+  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+  <script src="js/libs/modernizr-1.6.min.js"></script>
+
 </head>
+
 <body>
-<div id="container">
-<div id="header">
-<div id="logo" class="filter cursor" onclick="xajax_main('front_page');"></div>
+  <div id="container">
+  <div id="header">
+  <div id="logo" class="filter cursor"></div>
 
-<div id="top_menu">
-<?php display_top_menu(); ?>
-</div>
+  <div id="top_menu"><a id="photography_link" href="#">photography</a></div>
 
-<div id="bottom_menu"></div>
+  <div id="bottom_menu"></div>
 
-</div> <!-- end header -->
+  </div> <!-- end header -->
 
-<div id="left"></div>
-<div id="left2"></div>
-<div id="right"></div>
+  <div id="left"></div>
+  <div id="left2"></div>
+  <div id="right"></div>
 
-<div id="main_container">
-<div id="main">
-<?php display_main($location); ?>
-</div>
-<div class="spacer">&nbsp;</div>
-</div>
+  <div id="main_container">
+  <div id="main">
+  <?php display_main($location); ?>
+  </div>
+  <div class="spacer">&nbsp;</div>
+  </div>
 
-<div id="footer">
+  <div id="footer">
 
-<div id="copyright">
-&#169; MC Studios 1998-2008<br /><br />
-<div id="site_links"><?php display_site_links(); ?></div>
-</div>
+  <div id="copyright">
+  &#169; MC Studios 1998-2010<br /><br />
+  <div id="site_links"><?php display_site_links(); ?></div>
+  </div>
 
-<div id="hidden_links"> <!-- Support Search Engines -->
-<?php /* display_site_links(); */ ?>
-</div>
+  </div> <!-- end footer -->
+  </div> <!-- end container -->
 
-</div> <!-- end footer -->
-</div> <!-- end container -->
+  <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+
+  <script>
+    $(function(){
+    
+      $("#logo").click(function(){
+	$.get("/ax/main.php?loc=index", function(data){
+	  $("#main").html(data);
+	});
+      });
+    
+      $("#photography_link").click(function(){
+	$.get("/ax/bottom_menu.php?loc=photography", function(data){
+	  $("#bottom_menu").html(data);
+	});
+	$.get("/ax/main.php?loc=photography", function(data){
+	  $("#main").html(data);
+	});
+      });
+    };
+  </script>
+
+  <script>
+   var _gaq = [['_setAccount', 'UA-9149255-1'], ['_trackPageview']];
+   (function(d, t) {
+    var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    g.async = true;
+    g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g, s);
+   })(document, 'script');
+  </script>
+
 </body>
 </html>
