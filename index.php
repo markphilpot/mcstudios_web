@@ -43,7 +43,7 @@
 
   <div id="copyright">
   &#169; MC Studios 1998-2010<br /><br />
-  <div id="site_links"><?php display_site_links(); ?></div>
+  <div id="site_links"></div>
   </div>
 
   </div> <!-- end footer -->
