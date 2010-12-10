@@ -217,9 +217,6 @@ button {  width: auto; overflow: visible; }
 
 
 
-
-
-
  /* Primary Styles
     Author: Mark Philpot
  */
@@ -275,6 +272,7 @@ html, body
    position: absolute;
    left: 140px;
    height: 30px;
+   font-family: Daniel;
 }
 
 #bottom_menu

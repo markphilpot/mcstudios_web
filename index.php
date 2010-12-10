@@ -15,6 +15,7 @@
 
   <!-- CSS : implied media="all" -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fonts/daniel/stylesheet.css">
 
 </head>
 
@@ -49,9 +50,9 @@
   </div> <!-- end container -->
 
   <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
 
-  <script>
+  <script type="text/javascript">
     $(function(){
     
       $.get("/ax/main.php?loc=index", function(data){
@@ -75,7 +76,7 @@
     });
   </script>
 
-  <script>
+  <script type="text/javascript">
    var _gaq = [['_setAccount', 'UA-9149255-1'], ['_trackPageview']];
    (function(d, t) {
     var g = d.createElement(t),
