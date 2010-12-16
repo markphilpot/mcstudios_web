@@ -21,6 +21,7 @@
 </head>
 
 <body>
+  <div id="spinner"></div>
   <div id="container">
   <div id="header">
   <div id="logo" class="filter cursor"></div>
@@ -61,7 +62,11 @@
   <script type="text/javascript">
   
     function loadMain(loc){
-      $("#main").load("/ax/main.php?loc="+loc);
+      $("#main").html("");
+      $("#spinner").toggle();
+      $("#main").load("/ax/main.php?loc="+loc, function(){
+        $("#spinner").toggle("normal");
+      });
     };
   
     $(function(){
