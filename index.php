@@ -62,10 +62,10 @@
   <script type="text/javascript">
   
     function loadMain(loc){
-      $("#main").html("");
-      $("#spinner").toggle();
-      $("#main").load("/ax/main.php?loc="+loc, function(){
-        $("#spinner").toggle("normal");
+      $("#spinner").fadeIn("fast");
+      $("#main").fadeOut("fast").load("/ax/main.php?loc="+loc, function(){
+        $("#main").fadeIn("normal");
+        $("#spinner").fadeOut("slow");
       });
     };
   
