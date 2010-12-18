@@ -63,9 +63,11 @@
   
     function loadMain(loc){
       $("#spinner").fadeIn("fast");
-      $("#main").fadeOut("fast").load("/ax/main.php?loc="+loc, function(){
-        $("#main").fadeIn("normal");
-        $("#spinner").fadeOut("slow");
+      $("#main").fadeOut("fast", function(){
+        $("#main").load("/ax/main.php?loc="+loc, function(){
+          $("#main").fadeIn("normal");
+          $("#spinner").fadeOut("slow");
+        });
       });
     };
   
